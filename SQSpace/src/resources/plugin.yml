@@ -1,0 +1,7 @@
+name: SQSpace
+main: us.higashiyama.george.SQSpace.SQSpace
+version: '1.5.0'
+
+permissions:
+  SQSpace.nosuffocate
+

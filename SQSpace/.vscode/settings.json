@@ -1,0 +1,7 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Starquest Testing Servers\\Spigot Server\\plugins\\WorldEdit.jar",
+        "c:\\Starquest Testing Servers\\Spigot Server\\plugins\\WorldGuard.jar"
+    ]
+}
