@@ -11,6 +11,9 @@ import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
+import org.bukkit.block.Block;
+import org.bukkit.block.BlockFace;
+import org.bukkit.block.data.type.Chest.Type;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -23,6 +26,10 @@ import org.bukkit.event.inventory.InventoryType.SlotType;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import net.minecraft.world.level.block.BlockAir;
+import net.minecraft.world.level.block.BlockFluids;
+import net.minecraft.world.level.block.DoubleBlockFinder.BlockType;
 
 public class SQSpace extends JavaPlugin implements Listener {
 
@@ -150,12 +157,12 @@ public class SQSpace extends JavaPlugin implements Listener {
 		final World w = l.getWorld();
 		int height = 40;
 		for (int i = 0; i < height; i++) {
-			final int id1 = w.getBlockTypeIdAt(x, y + i + 1, z);
-			final int id2 = w.getBlockTypeIdAt(x, y - i, z);
-			if (id1 != 0) {
-				air1 = false;
+			final Block id1 = w.getBlockAt(x, y + i + 1, z);
+			final Block id2 = w.getBlockAt(x, y - i, z);
+			if (id1.getType() == Material.AIR) {
+				air1 = true;
 			}
-			if (id2 != 0) {
+			if (id2.getType() == Material.AIR) {
 				air2 = false;
 			}
 		}
