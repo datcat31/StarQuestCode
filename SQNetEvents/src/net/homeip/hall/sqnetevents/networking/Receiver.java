@@ -11,7 +11,6 @@ import java.util.ArrayList;
 
 import net.homeip.hall.sqnetevents.SQNetEvents;
 import net.homeip.hall.sqnetevents.packet.EventPacket;
-import net.homeip.hall.sqnetevents.packet.ReceivedDataEvent;
 
 public class Receiver implements Closeable {
 

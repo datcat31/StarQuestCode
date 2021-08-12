@@ -131,7 +131,7 @@ public class Data implements Serializable {
 
     }
 
-    private enum DataType implements Serializable {
+    private enum DataType {
 
         BYTE, SHORT, INT, LONG, DOUBLE, FLOAT, BOOLEAN, OBJECT, STRING
 

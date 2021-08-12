@@ -7,9 +7,6 @@ import java.net.SocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
 
-import org.bukkit.Bukkit;
-
-import net.homeip.hall.sqnetevents.SQNetEvents;
 import net.homeip.hall.sqnetevents.packet.Packet;
 
 public class Sender implements Closeable {
