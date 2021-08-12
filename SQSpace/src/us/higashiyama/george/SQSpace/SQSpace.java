@@ -1,6 +1,8 @@
 
 package us.higashiyama.george.SQSpace;
 
+import static org.bukkit.Material.AIR;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,8 +14,6 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.block.Block;
-import org.bukkit.block.BlockFace;
-import org.bukkit.block.data.type.Chest.Type;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -26,10 +26,6 @@ import org.bukkit.event.inventory.InventoryType.SlotType;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import net.minecraft.world.level.block.BlockAir;
-import net.minecraft.world.level.block.BlockFluids;
-import net.minecraft.world.level.block.DoubleBlockFinder.BlockType;
 
 public class SQSpace extends JavaPlugin implements Listener {
 
@@ -159,10 +155,10 @@ public class SQSpace extends JavaPlugin implements Listener {
 		for (int i = 0; i < height; i++) {
 			final Block id1 = w.getBlockAt(x, y + i + 1, z);
 			final Block id2 = w.getBlockAt(x, y - i, z);
-			if (id1.getType() == Material.AIR) {
+			if (id1.getType() != Material.AIR) {
 				air1 = true;
 			}
-			if (id2.getType() == Material.AIR) {
+			if (id2.getType() != AIR) {
 				air2 = false;
 			}
 		}

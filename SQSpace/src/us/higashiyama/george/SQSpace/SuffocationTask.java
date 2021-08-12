@@ -34,7 +34,7 @@ public class SuffocationTask extends BukkitRunnable {
 
 	@Override
 	public void run() {
-		if (!this.plugin.isInSpace(this.p)) {
+		if (SQSpace.isInSpace(this.p) != true) {
 			this.cancel(this.p);
 		}
 		if (this.plugin.hasSpaceArmor(this.p)) {
@@ -43,7 +43,7 @@ public class SuffocationTask extends BukkitRunnable {
 		if (this.p.isDead()) {
 			this.cancel(this.p);
 		}
-		if (this.plugin.noSuffacatePlayers.contains(this.p)) {
+		if (SQSpace.noSuffacatePlayers.contains(this.p)) {
 			this.cancel(this.p);
 		}
 		if (!this.canceled) {
