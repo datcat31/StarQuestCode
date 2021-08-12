@@ -1,7 +1,6 @@
 package net.homeip.hall.sqnetevents.packet;
 
 import net.homeip.hall.sqnetevents.SQNetEvents;
-import org.bukkit.event.Event;
 
 import java.io.*;
 import java.nio.ByteBuffer;
