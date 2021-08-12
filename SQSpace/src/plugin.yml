@@ -4,6 +4,5 @@ version: 1.2.3
 depend: [WorldEdit, WorldGuard]
 
 permissions:
-  SQSpace.nosuffocate:
-    default: op
+  SQSpace.nosuffocate
 
